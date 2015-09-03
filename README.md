@@ -2,6 +2,8 @@
 var number = require('agreement-schedules-exhibits-numbering')
 ```
 
+The package is a numbering scheme as described by [abstract-numbering](https://www.npmjs.com/package/abstract-numbering).
+
 # The Agreement
 
 The first child form is the agreement:
