@@ -39,6 +39,16 @@ assert.equal(
     [ { series:  { number: 1, of: 1 },
         element: { number: 1, of: 1 } },
       { series:  { number: 1, of: 1 },
+        element: { number: 1, of: 1 } },
+      { series:  { number: 1, of: 1 },
+        element: { number: 1, of: 1 } } ]),
+  'Section 1(a) of the Agreement')
+
+assert.equal(
+  number(
+    [ { series:  { number: 1, of: 1 },
+        element: { number: 1, of: 1 } },
+      { series:  { number: 1, of: 1 },
         element: { number: 1, of: 1 } } ],
     true),
   '1.')
