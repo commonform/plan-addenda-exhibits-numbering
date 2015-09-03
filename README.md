@@ -121,7 +121,7 @@ assert.equal(
     [ { series:  { number: 11, of: 11 },
         element: { number: 13, of: 13 } } ],
     true),
-  'Exhibit K-11.')
+  'Exhibit K-13.')
 
 assert.equal(
   ase(

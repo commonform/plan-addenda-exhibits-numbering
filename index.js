@@ -41,6 +41,9 @@ module.exports = function(numbering, shortForm) {
           outline(numbering.slice(2), shortForm) +
           ( !shortForm ? ( ' of ' + scheduleNumber ) : '' ) ) } } }
   else {
+    var inFirstSeries = deepEqual(
+      numbering[0].series,
+      { number: 1, of: 1 })
     var exhibitNumber = (
       'Exhibit ' +
       outline(
@@ -48,8 +51,14 @@ module.exports = function(numbering, shortForm) {
               number: first.series.number,
               of: first.series.number },
             element: {
-              number: ( first.element.number - 2),
-              of: ( first.element.number - 2 ) } } ],
+              number: (
+                inFirstSeries ?
+                  ( first.element.number - 2 ) :
+                  first.element.number ),
+              of: (
+                inFirstSeries ?
+                  ( first.element.of - 2 ) :
+                  first.element.of ) } } ],
         shortForm) )
     if (length === 1) {
       return exhibitNumber }
