@@ -23,7 +23,7 @@ assert.equal(
   'the Agreement')
 ```
 
-Children forms of the agreement are numbered by [outline-numbering][outline-numbering]:
+Children of the agreement are numbered by [outline-numbering][outline-numbering]:
 
 ```javascript
 assert.equal(
@@ -74,7 +74,7 @@ assert.equal(
   'Schedules to the Agreement')
 ```
 
-Each of its child forms is a schedule:
+Each of its children is a schedule:
 
 ```javascript
 assert.equal(
@@ -87,7 +87,7 @@ assert.equal(
   'Schedule 1.')
 ```
 
-The child forms of each schedule are numbered by [outline-numbering][outline-numbering] as well:
+The children of each schedule are numbered by [outline-numbering][outline-numbering] as well:
 
 ```javascript
 assert.equal(
@@ -104,7 +104,7 @@ assert.equal(
 
 # Exhibits
 
-Any other child forms are exhibits:
+Any other child form is an exhibit:
 
 ```javascript
 assert.equal(
@@ -129,7 +129,7 @@ assert.equal(
   'Exhibit 1')
 ```
 
-Their children forms are numbered by [outline-numbering][outline-numbering]:
+The children of each exhibit are numbered by [outline-numbering][outline-numbering]:
 
 ```javascript
 assert.equal(
