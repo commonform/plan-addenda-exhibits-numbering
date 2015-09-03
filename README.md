@@ -118,6 +118,13 @@ assert.equal(
 
 assert.equal(
   ase(
+    [ { series:  { number: 1, of: 2 },
+        element: { number: 3, of: 3 } } ],
+    true),
+  'Exhibit A-3.')
+
+assert.equal(
+  ase(
     [ { series:  { number: 11, of: 11 },
         element: { number: 13, of: 13 } } ],
     true),

@@ -49,7 +49,7 @@ module.exports = function(numbering, shortForm) {
       outline(
         [ { series: {
               number: first.series.number,
-              of: first.series.number },
+              of: first.series.of },
             element: {
               number: (
                 inFirstSeries ?
