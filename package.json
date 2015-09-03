@@ -4,7 +4,7 @@
   "version": "0.1.1",
   "author": "Kyle E. Mitchell <kyle@kemitchell.com> (https://kemitchell.com/)",
   "dependencies": {
-    "outline-numbering": "~0.1.1"
+    "outline-numbering": "~0.2.0"
   },
   "devDependencies": {
     "defence-cli": "~1.0.1",
