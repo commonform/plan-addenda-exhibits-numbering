@@ -1,7 +1,7 @@
 {
   "name": "agreement-schedules-exhibits-numbering",
   "description": "number traditional agreements with schedules and exhibits",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Kyle E. Mitchell <kyle@kemitchell.com> (https://kemitchell.com/)",
   "dependencies": {
     "outline-numbering": "~0.1.1"
