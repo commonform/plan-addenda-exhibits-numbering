@@ -4,7 +4,6 @@
   "version": "0.1.0",
   "author": "Kyle E. Mitchell <kyle@kemitchell.com> (https://kemitchell.com/)",
   "dependencies": {
-    "deep-equal": "~1.0.1",
     "outline-numbering": "~0.1.1"
   },
   "devDependencies": {

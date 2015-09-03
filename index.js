@@ -1,17 +1,16 @@
-var deepEqual = require('deep-equal')
 var outline = require('outline-numbering')
 
 function withinAgreement(numbering) {
-  return deepEqual(
-    numbering[0],
-    { series:  { number: 1, of: 1 },
-      element: { number: 1, of: 1 } }) }
+  var first = numbering[0]
+  return (
+    first.series.number === 1 &&
+    first.element.number === 1 ) }
 
 function withinSchedules(numbering) {
-  return deepEqual(
-    numbering[0],
-    { series:  { number: 1, of: 1 },
-      element: { number: 2, of: 2 } }) }
+  var first = numbering[0]
+  return (
+    first.series.number === 1 &&
+    first.element.number === 2 ) }
 
 module.exports = function(numbering, shortForm) {
   var length = numbering.length
@@ -41,9 +40,7 @@ module.exports = function(numbering, shortForm) {
           outline(numbering.slice(2), shortForm) +
           ( !shortForm ? ( ' of ' + scheduleNumber ) : '' ) ) } } }
   else {
-    var inFirstSeries = deepEqual(
-      numbering[0].series,
-      { number: 1, of: 1 })
+    var inFirstSeries = ( numbering[0].series.number === 1 )
     var exhibitNumber = (
       'Exhibit ' +
       outline(

@@ -12,8 +12,8 @@ The first child form is the agreement:
 var assert = require('assert')
 assert.equal(
   ase(
-    [ { series:  { number: 1, of: 1 },
-        element: { number: 1, of: 1 } } ],
+    [ { series:  { number: 1, of: 5 },
+        element: { number: 1, of: 4 } } ],
     true),
   'Agreement.')
 
@@ -63,7 +63,7 @@ The second child form contains schedules to the agreement:
 ```javascript
 assert.equal(
   ase(
-    [ { series:  { number: 1, of: 1 },
+    [ { series:  { number: 1, of: 5 },
         element: { number: 2, of: 2 } } ],
     true),
   'Schedules.')
@@ -121,7 +121,7 @@ assert.equal(
     [ { series:  { number: 1, of: 2 },
         element: { number: 3, of: 3 } } ],
     true),
-  'Exhibit A-3.')
+  'Exhibit A-1.')
 
 assert.equal(
   ase(
