@@ -1,12 +1,12 @@
 var outline = require('outline-numbering')
 
-function withinAgreement(numbering) {
+function withinPlan(numbering) {
   var first = numbering[0]
   return (
     first.series.number === 1 &&
     first.element.number === 1 ) }
 
-function withinSchedules(numbering) {
+function withinAddenda(numbering) {
   var first = numbering[0]
   return (
     first.series.number === 1 &&
@@ -20,20 +20,20 @@ module.exports = function(numbering, shortForm) {
   if (length < 1) {
     throw new Error('Invalid numbering') }
   var first = numbering[0]
-  if (withinAgreement(numbering)) {
+  if (withinPlan(numbering)) {
     if (length === 1) {
-      return ( shortForm ? 'Agreement.' : 'the Agreement' ) }
+      return ( shortForm ? 'Plan.' : 'the Plan' ) }
     else {
       return (
         ( !shortForm ? 'Section ' : '' ) +
         stripNounPrefix(outline(numbering.slice(1), shortForm)) +
-        ( !shortForm ? ' of the Agreement' : '' ) ) } }
-  else if (withinSchedules(numbering)) {
+        ( !shortForm ? ' of the Plan' : '' ) ) } }
+  else if (withinAddenda(numbering)) {
     if (length === 1) {
-      return ( shortForm ? 'Schedules.' : 'Schedules to the Agreement' ) }
+      return ( shortForm ? 'Addenda.' : 'Addenda to the Plan' ) }
     else {
       var scheduleNumber = (
-        'Schedule ' +
+        'Addendum ' +
         outline([ numbering[1] ], shortForm)
           .replace('Section ', '') )
       if (length === 2) {

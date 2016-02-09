@@ -1,53 +1,53 @@
 ```javascript
-var ase = require('agreement-schedules-exhibits-numbering')
+var pae = require('plan-addenda-exhibits-numbering')
 ```
 
 The package is a numbering scheme as described by [abstract-numbering](https://www.npmjs.com/package/abstract-numbering).
 
-# The Agreement
+# The Plan
 
 The first child form is the agreement:
 
 ```javascript
 var assert = require('assert')
 assert.equal(
-  ase(
+  pae(
     [ { series:  { number: 1, of: 5 },
         element: { number: 1, of: 4 } } ],
     true),
-  'Agreement.')
+  'Plan.')
 
 assert.equal(
-  ase(
+  pae(
     [ { series:  { number: 1, of: 1 },
         element: { number: 1, of: 1 } } ],
     false),
-  'the Agreement')
+  'the Plan')
 ```
 
 Children of the agreement are numbered by [outline-numbering][outline-numbering]:
 
 ```javascript
 assert.equal(
-  ase(
+  pae(
     [ { series:  { number: 1, of: 1 },
         element: { number: 1, of: 1 } },
       { series:  { number: 1, of: 1 },
         element: { number: 1, of: 1 } } ]),
-  'Section 1 of the Agreement')
+  'Section 1 of the Plan')
 
 assert.equal(
-  ase(
+  pae(
     [ { series:  { number: 1, of: 1 },
         element: { number: 1, of: 1 } },
       { series:  { number: 1, of: 1 },
         element: { number: 1, of: 1 } },
       { series:  { number: 1, of: 1 },
         element: { number: 1, of: 1 } } ]),
-  'Section 1(a) of the Agreement')
+  'Section 1(a) of the Plan')
 
 assert.equal(
-  ase(
+  pae(
     [ { series:  { number: 1, of: 1 },
         element: { number: 1, of: 1 } },
       { series:  { number: 1, of: 1 },
@@ -56,44 +56,44 @@ assert.equal(
   '1.')
 ```
 
-# Schedules
+# Addenda
 
 The second child form contains schedules to the agreement:
 
 ```javascript
 assert.equal(
-  ase(
+  pae(
     [ { series:  { number: 1, of: 5 },
         element: { number: 2, of: 2 } } ],
     true),
-  'Schedules.')
+  'Addenda.')
 
 assert.equal(
-  ase(
+  pae(
     [ { series:  { number: 1, of: 1 },
         element: { number: 2, of: 2 } } ],
     false),
-  'Schedules to the Agreement')
+  'Addenda to the Plan')
 ```
 
 Each of its children is a schedule:
 
 ```javascript
 assert.equal(
-  ase(
+  pae(
     [ { series:  { number: 1, of: 1 },
         element: { number: 2, of: 2 } },
       { series:  { number: 1, of: 1 },
         element: { number: 1, of: 1 } } ],
     true),
-  'Schedule 1.')
+  'Addendum 1.')
 ```
 
 The children of each schedule are numbered by [outline-numbering][outline-numbering] as well:
 
 ```javascript
 assert.equal(
-  ase(
+  pae(
     [ { series:  { number: 1, of: 1 },
         element: { number: 2, of: 2 } },
       { series:  { number: 1, of: 1 },
@@ -101,7 +101,7 @@ assert.equal(
       { series:  { number: 1, of: 1 },
         element: { number: 1, of: 1 } } ],
     false),
-  'Section 1 of Schedule 1')
+  'Section 1 of Addendum 1')
 ```
 
 # Exhibits
@@ -110,28 +110,28 @@ Any other child form is an exhibit:
 
 ```javascript
 assert.equal(
-  ase(
+  pae(
     [ { series:  { number: 1, of: 1 },
         element: { number: 3, of: 3 } } ],
     true),
   'Exhibit 1.')
 
 assert.equal(
-  ase(
+  pae(
     [ { series:  { number: 1, of: 2 },
         element: { number: 3, of: 3 } } ],
     true),
   'Exhibit A-1.')
 
 assert.equal(
-  ase(
+  pae(
     [ { series:  { number: 11, of: 11 },
         element: { number: 13, of: 13 } } ],
     true),
   'Exhibit K-13.')
 
 assert.equal(
-  ase(
+  pae(
     [ { series:  { number: 1, of: 1 },
         element: { number: 3, of: 3 } } ],
     false),
@@ -142,7 +142,7 @@ The children of each exhibit are numbered by [outline-numbering][outline-numberi
 
 ```javascript
 assert.equal(
-  ase(
+  pae(
     [ { series:  { number: 1, of: 1 },
         element: { number: 3, of: 3 } },
       { series:  { number: 1, of: 1 },
@@ -151,7 +151,7 @@ assert.equal(
   'Section 1 of Exhibit 1')
 
 assert.equal(
-  ase(
+  pae(
     [ { series:  { number: 1, of: 1 },
         element: { number: 3, of: 3 } },
       { series:  { number: 1, of: 1 },

@@ -1,7 +1,7 @@
 {
-  "name": "agreement-schedules-exhibits-numbering",
-  "description": "number traditional agreements with schedules and exhibits",
-  "version": "0.1.1",
+  "name": "plan-addenda-exhibits-numbering",
+  "description": "number plans with addenda and exhibits",
+  "version": "0.0.0",
   "author": "Kyle E. Mitchell <kyle@kemitchell.com> (https://kemitchell.com/)",
   "dependencies": {
     "outline-numbering": "~0.2.0"
@@ -11,7 +11,7 @@
     "replace-require-self": "~1.0.0"
   },
   "license": "Apache-2.0",
-  "repository": "commonform/agreement-schedules-exhibits-numbering",
+  "repository": "commonform/plan-addenda-exhibits-numbering",
   "scripts": {
     "test": "defence README.md | replace-require-self | node"
   }
