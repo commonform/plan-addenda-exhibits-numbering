@@ -10,6 +10,12 @@
     "defence-cli": "~1.0.1",
     "replace-require-self": "~1.0.0"
   },
+  "files": [
+    "LICENSE",
+    "NOTICE",
+    "README.md",
+    "index.js"
+  ],
   "license": "Apache-2.0",
   "repository": "commonform/plan-addenda-exhibits-numbering",
   "scripts": {
