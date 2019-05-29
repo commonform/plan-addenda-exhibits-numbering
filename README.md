@@ -2,6 +2,8 @@
 
 number plans with addenda and exhibits
 
+This package is part of the [abstract-numbering](https://www.npmjs.com/search?q=keywords:abstract-numbering) family of packages.
+
 ```javascript
 var pae = require('plan-addenda-exhibits-numbering')
 ```
