@@ -10,50 +10,88 @@ The first child form is the agreement:
 
 ```javascript
 var assert = require('assert')
-assert.equal(
+assert.deepStrictEqual(
   pae(
-    [ { series:  { number: 1, of: 5 },
-        element: { number: 1, of: 4 } } ],
-    true),
-  'Plan.')
+    [
+      {
+        series: { number: 1, of: 5 },
+        element: { number: 1, of: 4 }
+      }
+    ],
+    true
+  ),
+  'Plan.'
+)
 
-assert.equal(
+assert.deepStrictEqual(
   pae(
-    [ { series:  { number: 1, of: 1 },
-        element: { number: 1, of: 1 } } ],
-    false),
-  'the Plan')
+    [
+      {
+        series: { number: 1, of: 1 },
+        element: { number: 1, of: 1 }
+      }
+    ],
+    false
+  ),
+  'the Plan'
+)
 ```
 
 Children of the agreement are numbered by [outline-numbering][outline-numbering]:
 
 ```javascript
-assert.equal(
+assert.deepStrictEqual(
   pae(
-    [ { series:  { number: 1, of: 1 },
-        element: { number: 1, of: 1 } },
-      { series:  { number: 1, of: 1 },
-        element: { number: 1, of: 1 } } ]),
-  'Section 1 of the Plan')
+    [
+      {
+        series: { number: 1, of: 1 },
+        element: { number: 1, of: 1 }
+      },
+      {
+        series: { number: 1, of: 1 },
+        element: { number: 1, of: 1 }
+      }
+    ]
+  ),
+  'Section 1 of the Plan'
+)
 
-assert.equal(
+assert.deepStrictEqual(
   pae(
-    [ { series:  { number: 1, of: 1 },
-        element: { number: 1, of: 1 } },
-      { series:  { number: 1, of: 1 },
-        element: { number: 1, of: 1 } },
-      { series:  { number: 1, of: 1 },
-        element: { number: 1, of: 1 } } ]),
-  'Section 1(a) of the Plan')
+    [
+      {
+        series: { number: 1, of: 1 },
+        element: { number: 1, of: 1 }
+      },
+      {
+        series: { number: 1, of: 1 },
+        element: { number: 1, of: 1 }
+      },
+      {
+        series: { number: 1, of: 1 },
+        element: { number: 1, of: 1 }
+      }
+    ]
+  ),
+  'Section 1(a) of the Plan'
+)
 
-assert.equal(
+assert.deepStrictEqual(
   pae(
-    [ { series:  { number: 1, of: 1 },
-        element: { number: 1, of: 1 } },
-      { series:  { number: 1, of: 1 },
-        element: { number: 1, of: 1 } } ],
-    true),
-  '1.')
+    [
+      {
+        series: { number: 1, of: 1 },
+        element: { number: 1, of: 1 }
+      },
+      {
+        series: { number: 1, of: 1 },
+        element: { number: 1, of: 1 }
+      }
+    ],
+    true
+  ),
+  '1.'
+)
 ```
 
 # Addenda
@@ -61,47 +99,77 @@ assert.equal(
 The second child form contains schedules to the agreement:
 
 ```javascript
-assert.equal(
+assert.deepStrictEqual(
   pae(
-    [ { series:  { number: 1, of: 5 },
-        element: { number: 2, of: 2 } } ],
-    true),
-  'Addenda.')
+    [
+      {
+        series: { number: 1, of: 5 },
+        element: { number: 2, of: 2 }
+      }
+    ],
+    true
+  ),
+  'Addenda.'
+)
 
-assert.equal(
+assert.deepStrictEqual(
   pae(
-    [ { series:  { number: 1, of: 1 },
-        element: { number: 2, of: 2 } } ],
-    false),
-  'Addenda to the Plan')
+    [
+      {
+        series: { number: 1, of: 1 },
+        element: { number: 2, of: 2 }
+      }
+    ],
+    false
+  ),
+  'Addenda to the Plan'
+)
 ```
 
 Each of its children is a schedule:
 
 ```javascript
-assert.equal(
+assert.deepStrictEqual(
   pae(
-    [ { series:  { number: 1, of: 1 },
-        element: { number: 2, of: 2 } },
-      { series:  { number: 1, of: 1 },
-        element: { number: 1, of: 1 } } ],
-    true),
-  'Addendum 1.')
+    [
+      {
+        series: { number: 1, of: 1 },
+        element: { number: 2, of: 2 }
+      },
+      {
+        series: { number: 1, of: 1 },
+        element: { number: 1, of: 1 }
+      }
+    ],
+    true
+  ),
+  'Addendum 1.'
+)
 ```
 
 The children of each schedule are numbered by [outline-numbering][outline-numbering] as well:
 
 ```javascript
-assert.equal(
+assert.deepStrictEqual(
   pae(
-    [ { series:  { number: 1, of: 1 },
-        element: { number: 2, of: 2 } },
-      { series:  { number: 1, of: 1 },
-        element: { number: 1, of: 1 } },
-      { series:  { number: 1, of: 1 },
-        element: { number: 1, of: 1 } } ],
-    false),
-  'Section 1 of Addendum 1')
+    [
+      {
+        series: { number: 1, of: 1 },
+        element: { number: 2, of: 2 }
+      },
+      {
+        series: { number: 1, of: 1 },
+        element: { number: 1, of: 1 }
+      },
+      {
+        series: { number: 1, of: 1 },
+        element: { number: 1, of: 1 }
+      }
+    ],
+    false
+  ),
+  'Section 1 of Addendum 1'
+)
 ```
 
 # Exhibits
@@ -109,55 +177,95 @@ assert.equal(
 Any other child form is an exhibit:
 
 ```javascript
-assert.equal(
+assert.deepStrictEqual(
   pae(
-    [ { series:  { number: 1, of: 1 },
-        element: { number: 3, of: 3 } } ],
-    true),
-  'Exhibit 1.')
+    [
+      {
+        series: { number: 1, of: 1 },
+        element: { number: 3, of: 3 }
+      }
+    ],
+    true
+  ),
+  'Exhibit 1.'
+)
 
-assert.equal(
+assert.deepStrictEqual(
   pae(
-    [ { series:  { number: 1, of: 2 },
-        element: { number: 3, of: 3 } } ],
-    true),
-  'Exhibit A-1.')
+    [
+      {
+        series: { number: 1, of: 2 },
+        element: { number: 3, of: 3 }
+      }
+    ],
+    true
+  ),
+  'Exhibit A-1.'
+)
 
-assert.equal(
+assert.deepStrictEqual(
   pae(
-    [ { series:  { number: 11, of: 11 },
-        element: { number: 13, of: 13 } } ],
-    true),
-  'Exhibit K-13.')
+    [
+      {
+        series: { number: 11, of: 11 },
+        element: { number: 13, of: 13 }
+      }
+    ],
+    true
+  ),
+  'Exhibit K-13.'
+)
 
-assert.equal(
+assert.deepStrictEqual(
   pae(
-    [ { series:  { number: 1, of: 1 },
-        element: { number: 3, of: 3 } } ],
-    false),
-  'Exhibit 1')
+    [
+      {
+        series: { number: 1, of: 1 },
+        element: { number: 3, of: 3 }
+      }
+    ],
+    false
+  ),
+  'Exhibit 1'
+)
 ```
 
 The children of each exhibit are numbered by [outline-numbering][outline-numbering]:
 
 ```javascript
-assert.equal(
+assert.deepStrictEqual(
   pae(
-    [ { series:  { number: 1, of: 1 },
-        element: { number: 3, of: 3 } },
-      { series:  { number: 1, of: 1 },
-        element: { number: 1, of: 1 } } ],
-    false),
-  'Section 1 of Exhibit 1')
+    [
+      {
+        series: { number: 1, of: 1 },
+        element: { number: 3, of: 3 }
+      },
+      {
+        series: { number: 1, of: 1 },
+        element: { number: 1, of: 1 }
+      }
+    ],
+    false
+  ),
+  'Section 1 of Exhibit 1'
+)
 
-assert.equal(
+assert.deepStrictEqual(
   pae(
-    [ { series:  { number: 1, of: 1 },
-        element: { number: 3, of: 3 } },
-      { series:  { number: 1, of: 1 },
-        element: { number: 1, of: 1 } } ],
-    true),
-  '1.')
+    [
+      {
+        series: { number: 1, of: 1 },
+        element: { number: 3, of: 3 }
+      },
+      {
+        series: { number: 1, of: 1 },
+        element: { number: 1, of: 1 }
+      }
+    ],
+    true
+  ),
+  '1.'
+)
 ```
 
 [outline-numbering]: https://npmjs.com/packages/outline-numbering
