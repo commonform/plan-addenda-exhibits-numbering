@@ -1,3 +1,7 @@
+# plan-addenda-exhibits-numbering
+
+number plans with addenda and exhibits
+
 ```javascript
 var pae = require('plan-addenda-exhibits-numbering')
 ```
