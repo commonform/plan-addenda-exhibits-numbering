@@ -38,7 +38,7 @@ module.exports = function (numbering, shortForm) {
     }
     var scheduleNumber = (
       'Addendum ' +
-      outline([ numbering[1] ], shortForm).replace('Section ', '')
+      outline([numbering[1]], shortForm).replace('Section ', '')
     )
     if (length === 2) return scheduleNumber
     return (
